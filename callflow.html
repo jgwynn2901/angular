@@ -1,0 +1,196 @@
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span10">
+<div class="form-container">
+    <form action="/frame" method="post">
+        <div class="span4">
+            <div class="control-group">
+                <label for="CLAIM:ISO_AGENCY_ID">Agency ID</label>
+                <input type="text" id="CLAIM:ISO_AGENCY_ID" title>
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:POLICY_TYPE">Policy Type</label>
+                <select id="CLAIM:POLICY:POLICY_TYPE" name="CLAIM:POLICY:POLICY_TYPE" title>
+                <option disabled selected style="display:none;">
+                </option>
+                <option value="PAPP">PERSONAL AUTO</option>
+                </select>
+            </div>
+        <div class="control-group">
+            <label for="CLAIM:POLICY:COVERAGE_CODE">Coverage Code</label>
+            <select id="CLAIM:POLICY:COVERAGE_CODE" name="CLAIM:POLICY:COVERAGE_CODE" title>
+                <option disabled selected style="display:none;">
+                </option>
+                <option value="BODI">BODILY INJURY</option>
+                <option value="COLL">COLLISION</option>
+                <option value="COMP">COMPREHENSIVE</option>
+                <option value="GLSS">GLASS</option>
+                <option value="MPAY">MEDICAL PAYMENTS</option>
+                <option value="NFLT">PIP</option>
+                <option value="OTAU">OTHER AUTO</option>
+                <option value="PRPD">PROPERTY DAMAGE</option>
+                <option value="RENT">RENTAL REIMBURSEMENT</option>
+                <option value="TOWL">TOWING & LABOR</option>
+                <option value="UNDR">UNDERINSURED MOTORIST</option>
+                <option value="UNIN">UNINSURED MOTORIST</option>
+                <option value="PROP">GENERAL PROPERTY</option>
+                <option value="HULL">HULL</option>
+                <option value="MOTR">MOTOR</option>
+            </select>
+        </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:POLICY_NUMBER">Policy Number</label>
+                <input type="text" id="CLAIM:POLICY:POLICY_NUMBER"
+                       title="If This Policy Is Not Correct, Please Add Different Policy Number In Comments."
+                       required="required">
+                </input>
+
+                <label for="CLAIM:POLICY:EFFECTIVE_DATE">Effective Date</label>
+                <input type="date" id="CLAIM:POLICY:EFFECTIVE_DATE" title="May I have the policy effective date?">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:EXPIRATION_DATE">Expiration Date</label>
+                <input type="date" id="CLAIM:POLICY:EXPIRATION_DATE"
+                       title="May I also have the policy expiration date?">
+                </input>
+
+                <label for="CLAIM:INSURED:NAME_FIRST">First Name</label>
+                <input type="text" id="CLAIM:INSURED:NAME_FIRST"
+                       title="(If field is blank)May I have Insured's First Name?">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:INSURED:NAME_MI">MI</label>
+                <input type="text" id="CLAIM:INSURED:NAME_MI"
+                       title="(please document Insured's Middle Initial if applicable)">
+                </input>
+
+                <label for="CLAIM:INSURED:NAME_LAST">Last Name</label>
+                <input type="text" id="CLAIM:INSURED:NAME_LAST"
+                       title="(If field is blank)May I have Insured's Last Name?">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:INSURED:ADDRESS_LINE1">Address Line 1</label>
+                <input type="text" id="CLAIM:INSURED:ADDRESS_LINE1"
+                       title="(If field is blank)May I have Insured's street address?" required="required">
+                </input>
+
+                <label for="CLAIM:INSURED:ADDRESS_LINE2">Address Line 2</label>
+                <input type="text" id="CLAIM:INSURED:ADDRESS_LINE2"
+                       title="(If field is blank, please enter apt #, P.O.Box# or suite # if applicable)">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:INSURED:ADDRESS_ZIP">Zip Code</label>
+                <input type="text" id="CLAIM:INSURED:ADDRESS_ZIP"
+                       title="(If field is blank)May I have the zip code of the Insured's address?"
+                       data-mask="#####-####" required="required">
+                </input>
+
+                <label for="CLAIM:INSURED:ADDRESS_CITY">City</label>
+                <input type="text" id="CLAIM:INSURED:ADDRESS_CITY"
+                       title="(Verify the city reflecting the insured's address)" required="required">
+                </input>
+            </div>
+        </div>
+        <div class="span4">
+            <div class="control-group">
+                <label for="CLAIM:INSURED:ADDRESS_STATE">State</label>
+                <input type="text" id="CLAIM:INSURED:ADDRESS_STATE"
+                       title="(Verify the state reflecting the insured's address)" required="required">
+                </input>
+
+                <label for="CLAIM:INSURED:PHONE_WORK">Work Telephone</label>
+                <input type="tel" id="CLAIM:INSURED:PHONE_WORK" title="May I have the Insured's work phone?"
+                       data-mask="(###)###-####x####">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:INSURED:PHONE_HOME">Home Telephone</label>
+                <input type="tel" id="CLAIM:INSURED:PHONE_HOME" title="May I have the Insured's home phone?"
+                       data-mask="(###)###-####">
+                </input>
+
+                <label for="CLAIM:INSURED:SSN">Social Security #</label>
+                <input type="text" id="CLAIM:INSURED:SSN"
+                       title="May I have his/her social security number please?  (If available, must enter all 9 digits)"
+                       data-mask="###-##-####" required="required">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:INSURED:PARTY_ROLE">Role</label>
+                <select id="CLAIM:INSURED:PARTY_ROLE" name="CLAIM:INSURED:PARTY_ROLE" title>
+                    <option disabled selected style="display:none;">
+                    </option>
+                    <option value="CL">CLAIMANT</option>
+                    <option value="CI">BOTH CLAIMANT AND INSURED</option>
+                    <option value="CD">CLAIMANT DRIVER</option>
+                    <option value="CP">CLAIMANT PASSENGER</option>
+                    <option value="CE">CLAIMANT PEDESTRIAN</option>
+                    <option value="ID">INSURED DRIVER</option>
+                    <option value="IP">INSURED PASSENGER</option>
+                    <option value="IE">INSURED EMPLOYEE</option>
+                    <option value="IN">INSURED</option>
+                    <option value="OW">OWNER</option>
+                    <option value="PT">PARTNER</option>
+                    <option value="TN">TENANT</option>
+                    <option value="WT">WITNESS</option>
+                </select>
+
+                <label for="CLAIM:POLICY:AGENT:NAME">Agency Name</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:NAME" title="(If field is blank)May I have the agent's name?">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:AGENT:ADDRESS_LINE1">Agency Address Line1</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:ADDRESS_LINE1"
+                       title="(If field is blank)May I have agent's address?">
+                </input>
+
+                <label for="CLAIM:POLICY:AGENT:ADDRESS_LINE2">Agency Address Line2</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:ADDRESS_LINE2"
+                       title="(If field is blank, please document apt#, suite # or p.o.box# if applicable)">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:AGENT:ADDRESS_ZIP">Zip Code</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:ADDRESS_ZIP"
+                       title="(If field is prefilled, please verify agent zip code with caller)" data-mask="#####-####">
+                </input>
+
+                <label for="CLAIM:POLICY:AGENT:ADDRESS_CITY">City</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:ADDRESS_CITY" title>
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:AGENT:ADDRESS_STATE">State</label>
+                <input type="text" id="CLAIM:POLICY:AGENT:ADDRESS_STATE"
+                       title="(If field is prefilled, please verify agent state with caller)">
+                </input>
+
+                <label for="CLAIM:POLICY:AGENT:PHONE_WORK">Agent Work Phone</label>
+                <input type="tel" id="CLAIM:POLICY:AGENT:PHONE_WORK"
+                       title="(If field is blank)May I have agent's work phone?" data-mask="(###)###-####x####">
+                </input>
+            </div>
+            <div class="control-group">
+                <label for="CLAIM:POLICY:AGENT:PHONE_FAX">Agent Fax</label>
+                <input type="tel" id="CLAIM:POLICY:AGENT:PHONE_FAX"
+                       title="(if field is prefilled, please verify agent fax number with caller)"
+                       data-mask="(###)###-####">
+                </input>
+
+                <label for="CLAIM:POLICY:AGENT:EMAIL_ADDRESS">Agency Email</label>
+                <input type="email" id="CLAIM:POLICY:AGENT:EMAIL_ADDRESS"
+                       title="(Please document agent email address if applicable)">
+                </input>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+</div>
+</div>

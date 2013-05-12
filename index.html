@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>An Introduction to AngularJS</title>
+  <link rel="stylesheet" href="app/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="app/css/style.css">
+  <script src="app/js/jquery-1.9.1.min.js"></script>
+  <script src="app/js/underscore.min.js"></script>
+  <script src="app/js/bootstrap.min.js"></script>
+  <script src="app/js/angular.min.js"></script>
+  <script src="app/app.js"></script>
+</head>
+<body>
+<div class="topbar">
+    <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#/">AngularJS</a>
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+                <li><a href="#/">Home</a> </li>
+                <li><a href="#/frame">Callflow</a> </li>
+                <li><a href="#/login">Login</a> </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div id="view" ng-view></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
